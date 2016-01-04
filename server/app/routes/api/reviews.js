@@ -23,6 +23,8 @@ router.post('/', function(req, res, next) {
 router.get('/', function(req, res, next) {
   Review.find({})
     .then(function(reviews) {
+      console.log('this is where i am');
+      console.log(reviews);
       return res.json(reviews)
     })
     .then(null, next);
