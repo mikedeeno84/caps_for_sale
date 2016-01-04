@@ -13,20 +13,20 @@ var seedReviews = function() {
       user: mongoose.Types.ObjectId(),
       hat : mongoose.Types.ObjectId(),
       rating : 4,
-      body : 'this is a review for the berets',
+      body : 'this is a review for the berets'
     },
     {
       user: mongoose.Types.ObjectId(),
       hat : mongoose.Types.ObjectId(),
       rating : '3',
-      body : 'this is a review for the breton',
+      body : 'this is a review for the breton'
       //reviews : ''
     },
     {
       user: mongoose.Types.ObjectId(),
       hat : mongoose.Types.ObjectId(),
       rating : '2',
-      body : 'this is a review for the bowler',
+      body : 'this is a review for the bowler'
       //reviews : ''
     }
   ]
