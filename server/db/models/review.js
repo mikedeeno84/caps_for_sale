@@ -5,4 +5,6 @@ var schema = new mongoose.Schema({
 	hat: {type: Schema.Types.ObjectId, ref: 'Hat', required: true},
 	rating: {type: Number, min:1, max:5, required: true},
 	body: {type: String}
-})
+});
+
+module.exports = mongoose.model("Review", schema);
