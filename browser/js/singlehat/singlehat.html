@@ -1,0 +1,8 @@
+<h1>{{hat.title}}</h1>
+<img ng-src="{{hat.image}}">
+<div ng-show = "hat.occasions">
+	<h2>Occasions</h2>
+	<span ng-repeat="occasion in hat.occasions">{{occasion}}</span>
+</div>
+<h3 ng-show="hat.formality">{{hat.formality}}</h3>
+<review ng-show = "hat.reviews" ng-repeat="review in hat.reviews"></review>
