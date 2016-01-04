@@ -1,4 +1,5 @@
 var router = require('express').Router({mergeParams: true});
+
 var Hat = require('../../../db/models/hats');
 router.get('/', function (req, res, next) {
 	Hat.find(req.params).exec()
