@@ -2,20 +2,26 @@ app.config(function($stateProvider){
 	$stateProvider.state('users',{
 		url: '/users',
 		templateUrl: 'js/users/users.html',
-		controller: 'UserController'
+		controller: 'UserController',
+		resolve: {
+			users: function(UserFactory){
+				return UserFactory.getUsers(); 
+			}
+		}
 	});
 });
 
-app.controller('UserController',function($scope,UserFactory){
-	$scope.users;
+app.controller('UserController',function($scope,UserFactory,users){
+	
+	$scope.users = users;
 
-	activate();
+	// activate();
 
-	function activate() {
-		return UserFactory.getUsers()
-			.then(function(data){
-				$scope.users = data;
-				return $scope.users;
-			})
-	}
+	// function activate() {
+	// 	return UserFactory.getUsers()
+	// 		.then(function(data){
+	// 			$scope.users = data;
+	// 			return $scope.users;
+	// 		})
+	// }
 })
