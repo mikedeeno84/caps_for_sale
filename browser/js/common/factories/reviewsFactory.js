@@ -6,10 +6,10 @@ app.factory('ReviewFactory', function($http) {
       url : '/api/reviews',
       method : 'POST',
       data : review
-    })
+    }).then( response => response.data );
 
   o.getReviews = () =>
-    $http.get('/api/reviews', response => response.body);
+    $http.get('/api/reviews', response => response.data);
 
   o.getSpecificReviews =  (hatId) =>
     $http.get({
