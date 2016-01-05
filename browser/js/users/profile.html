@@ -1,6 +1,6 @@
 <div>
     <div class="profileInfo col-xs-2">
-        <div class='col-xs-2'>
+        <div class='col-xs-12'>
             <img class='profilePic' src={{profile.avatar}} alt="">
         </div>
         <div class="col-xs-12 profileData">
@@ -10,15 +10,33 @@
             <p>Animal For Hands</p>
         </div>
     </div>
-    <div class=" profileContainer2">
+    <div class="col-xs-2"></div>
+    <div class=" col-xs-10">
         <div class="col-xs-3 userBox">
             <div class="container ">
                 <div class="col-xs-3">
-                    <p>FAVORITE HAT</p>
+                    <h2>Bio</h2>
                 </div>
-                {{profile}} {{bio}}
+				<div class="col-xs-12">
+                	<p>{{bio}}</p>
+				</div>
                 <h4></h4>
             </div>
         </div>
+    </div>
+    <div class="addPadding">
+    	
+    <div class="col-xs-2"></div>
+    <div class="col-xs-10">
+    	<h2>Your Hats!</h2>
+    	<p id="noHats" ng-show="profile.owned.length===0">You have no hats :( </p>
+		<hat-item ng-repeat="hat in profile.owned" hat='hat'></hat-item>
+    </div>
+    <div class="col-xs-2"></div>
+    <div class="col-xs-10">
+    	<h2>Hats You Want!</h2>
+    	<p id="noHats" ng-show="profile.coveted.length===0">You Have All the Hats You Need!</p>
+		<hat-item ng-repeat="hat in profile.owned" hat='hat'></hat-item>
+    </div>
     </div>
 </div>

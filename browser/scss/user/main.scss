@@ -47,13 +47,13 @@
 	img.score {
 		height: 40px;
 	}
+	padding: 15px;
 }
 
 .profileInfo {
 	padding-top: 20px;
 	img.profilePic {
-		margin-left: 13px;
-		height: 170px;
+		max-height: 170px;
 		border-radius: 50%
 	}
 	position: fixed;
@@ -61,11 +61,19 @@
 	top: 92px;
 	height: 100%;
 	// width: 230px;
-	background: red;
+	background: #8A72F1;
 	>div{
 		clear: left;
 	}
 	.profileData {
 		margin-top: 15px;
 	}
+}
+
+#noHats {
+	size: 40px;
+}
+
+.addPadding {
+	padding: 60px;
 }

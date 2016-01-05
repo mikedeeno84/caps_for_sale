@@ -3,7 +3,10 @@ var mongoose = require('mongoose');
 var User = require('../../../db/models/user.js')
 
 router.param('user_id',function(req,res,next,user_id){
-	User.findOne({_id: user_id}).exec()
+	User.findOne({_id: user_id})
+	.populate('coveted')
+	.populate('owned')
+	.exec()
 	.then(function(user){
 		req.user = user;
 		next();
