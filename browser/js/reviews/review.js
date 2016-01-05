@@ -4,20 +4,19 @@ app.config(function($stateProvider) {
     controller : 'ReviewController',
     templateUrl : 'js/reviews/review.html',
     resolve : {
-      reviews : (ReviewFactory) => {
-        return ReviewFactory.getReviews()
-          .then(reviews => reviews.data);
+      allreviews : function(ReviewFactory) {
+        return ReviewFactory.getReviews();
       },
-      specificReviews : ($stateParams, ReviewFactory) => {
-        return ReviewFactory.getSpecificReviews($stateParams._id)
-          .then(reviews => reviews.data);
+      specificreviews : function(ReviewFactory,$stateParams) {
+        //return ReviewFactory.getSpecificReviews($stateParams._id);
+        return "";
       }
     }
   });
 });
 
-app.controller("ReviewController", function($scope, $stateParams, reviews, specificReviews) {
-  $scope.reviews = reviews;
-  $scope.specificReviews = specificReviews;
+app.controller("ReviewController", function($scope, $stateParams, allreviews,specificreviews) {
+  $scope.reviews = allreviews;
+  $scope.specificreviews = specificreviews;
   $scope.hatId = $stateParams._id;
 });
