@@ -1,0 +1,7 @@
+<h4>{{hat.name}}</h4>
+<img src="https://cdn.tutsplus.com/vector/uploads/legacy/tuts/000-2012/476_papa_vector/images/preview.jpg"  style="width:inherit">
+<span ng-show = "hat.occasions">
+	<h5>Occasions</h5>
+	<span ng-repeat="occasion in hat.occasions">{{occasion | capitalize}} </span>
+</span>
+<h5 ng-show="hat.formality">Formality: {{hat.formality}}</h4>
