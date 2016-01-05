@@ -1,8 +1,7 @@
 <div class="hats">
    <div class="content-container">
        <div ng-repeat="hat in hats">
-           <!--({ _id : hat._id }) should be passed to ui-sref-->
-           <a ui-sref="reviews">{{ hat.name }}</a>
+       	<hat-item hat='hat'></hat-item>
        </div>
    </div>
 </div>

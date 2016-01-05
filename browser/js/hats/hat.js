@@ -4,45 +4,17 @@ app.config(function($stateProvider) {
     controller : 'HatController',
     templateUrl : 'js/hats/hat.html',
     resolve : {
-
+      hats: function(HatFactory){
+          return HatFactory.getAllHats()
+      }
     }
   })
 });
 
-app.controller('HatController', function($scope) {
+app.controller('HatController', function($scope, hats) {
   // mock hat data
   // format is most likely wrong too
-  $scope.hats = [
-    {  "_id": "568ad24f6b7e17cf8fa885ce",
-      "name": "Berets",
-      "image": "",
-      "formality": "4",
-      "reviews": [ ],
-      "occasions": [
-        "summer"
-      ]
-    },
-    {
-      "_id": "568ad24f6b7e17cf8fa885cf",
-      "name": "Breton Caps",
-      "image": "",
-      "formality": "3",
-      "reviews": [ ],
-      "occasions": [
-        ""
-      ]
-    },
-    {
-      "_id": "568ad24f6b7e17cf8fa885d0",
-      "name": "Bowler Hats",
-      "image": "",
-      "formality": "2",
-      "reviews": [ ],
-      "occasions": [
-        "errday",
-        "class"
-      ]
-    }
-  ]
+  $scope.hats = hats
+
 
 })
