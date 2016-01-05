@@ -1,49 +1,31 @@
-<div>
-    <p>TEST</p>
-    <div class="col-xs-3" ng-repeat='user in users'>
-        <div class="container">
-            <div>
-                <img src={{user.avatar}} alt="">
+<div class=" userContainer container" ng-repeat='user in users track by $index'>
+    <div class="col-xs-3 userBox" ng-class="{oddBox: $index%2!==0}">
+        <div class="container profile">
+            <div class='col-xs-2'>
+                <img class='profilePic' src={{user.avatar}} alt="">
             </div>
-            <div class="col-xs-9">
+            <div class="col-xs-3">
+                <p>User Name</p>
                 <p>Email: {{user.email}}</p>
+                <p>Location?</p>
+                <p>Animal For Hands</p>
+            </div>
+            <div class="col-xs-3">
+                <p>FAVORITE HAT</p>
+            </div>
+            <div class="col-xs-3" >
+                <p>MOTHA FUCKING HAT SCORE</p>
+                <div class='hatScore'>
+	                <span><img class="score" src="img/Red_Fedora.png"></span>
+	                <span><img class="score" src="img/Red_Fedora.png"></span>
+	                <span><img class="score" src="img/Red_Fedora.png"></span>
+	                <span><img class="score" src="img/Red_Fedora.png"></span>
+	                <span><img class="score" src="img/Red_Fedora.png"></span>
+                </div>
+                	
+
             </div>
             <h4></h4>
         </div>
-    </div>
-</div>
-
-<div class="col-md-12 col-sm-12 col-xs-6" style="clear: left">
-    <div>
-        <h3>Add A Hat!</h3>
-        <form name="addHat">
-            <div class="col-sm-12 hatFormBox">
-                <label for="author" class="col-sm-2 control-label">Style</label>
-                <div class="col-sm-4">
-                    <input name="author" type="text" class="form-control" />
-                </div>
-            </div>
-            <div class="col-sm-12 hatFormBox">
-                <label for="email" class="col-sm-2 control-label">URL</label>
-                <div class="col-sm-4">
-                    <input name="email" type="text" class="form-control" />
-                </div>
-            </div>
-            <div class="col-sm-12 hatFormBox">
-                <label for="title" class="col-sm-2 control-label">Occasions</label>
-                <div class="col-sm-4">
-                    <input name="title" type="text" class="form-control" />
-                </div>
-            </div>
-            <div class="col-sm-12 hatFormBox">
-                <label for="content" class="col-sm-2 control-label">Formality</label>
-                <div class="col-sm-4">
-                    <input name="content" type="text" class="form-control" />
-                </div>
-            </div>
-            <div class="col-sm-6"  style="text-align: right; margin-top: 5px">
-                <button type="submit" class="btn btn-primary">submit</button>
-            </div>
-        </form>
     </div>
 </div>

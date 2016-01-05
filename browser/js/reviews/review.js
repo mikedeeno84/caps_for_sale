@@ -2,21 +2,17 @@ app.config(function($stateProvider) {
   $stateProvider.state("reviews", {
     url : '/reviews',
     controller : 'ReviewController',
-    templateUrl : 'js/reviews/reviews.html',
+    templateUrl : 'js/reviews/review.html',
     resolve : {
-      allreviews : function(ReviewFactory) {
-        return ReviewFactory.getReviews();
-      },
-      specificreviews : function(ReviewFactory,$stateParams) {
-        //return ReviewFactory.getSpecificReviews($stateParams._id);
-        return "";
+      allhats : function(ReviewFactory, HatFactory) {
+        //return ReviewFactory.getReviews();
+        return HatFactory.getAllHats();
       }
     }
   });
 });
 
-app.controller("ReviewController", function($scope, $stateParams, allreviews,specificreviews) {
-  $scope.reviews = allreviews;
-  $scope.specificreviews = specificreviews;
+app.controller("ReviewController", function($scope, $stateParams, allhats) {
+  $scope.hats = allhats;
   $scope.hatId = $stateParams._id;
 });
