@@ -7,11 +7,17 @@ app.config(function($stateProvider) {
       reviews : (ReviewFactory) => {
         return ReviewFactory.getReviews()
           .then(reviews => reviews.data);
+      },
+      specificReviews : ($stateParams, ReviewFactory) => {
+        return ReviewFactory.getSpecificReviews($stateParams._id)
+          .then(reviews => reviews.data);
       }
     }
   });
 });
 
-app.controller("ReviewController", function($scope, reviews) {
+app.controller("ReviewController", function($scope, $stateParams, reviews, specificReviews) {
   $scope.reviews = reviews;
+  $scope.specificReviews = specificReviews;
+  $scope.hatId = $stateParams._id;
 });
