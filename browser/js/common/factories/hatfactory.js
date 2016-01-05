@@ -1,4 +1,4 @@
-app.factory('HatFactory', function($http){
+app.factory('hatFactory', function($http){
 	var factory = {		
 	};
 	factory.getAllHats = function(){
@@ -15,6 +15,12 @@ app.factory('HatFactory', function($http){
 		return $http.deleteHat('/api/hats/' + hatId).then(function(response){
 			return response.data;
 		}).then(null, next);
+	}
+	factory.addHat = function(newHatObj){
+		return $http.post('/api/hats/',newHatObj)
+				.then(function(response){
+					return response
+				})
 	}	
 	return factory
 })

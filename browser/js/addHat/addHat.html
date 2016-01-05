@@ -1,49 +1,37 @@
-<div>
-    <p>TEST</p>
-    <div class="col-xs-3" ng-repeat='user in users'>
-        <div class="container">
-            <div>
-                <img src={{user.avatar}} alt="">
-            </div>
-            <div class="col-xs-9">
-                <p>Email: {{user.email}}</p>
-            </div>
-            <h4></h4>
-        </div>
-    </div>
-</div>
-
 <div class="col-md-12 col-sm-12 col-xs-6" style="clear: left">
     <div>
         <h3>Add A Hat!</h3>
-        <form name="addHat">
+        <form name="addHat" ng-submit="formSubmit(newHat)">
             <div class="col-sm-12 hatFormBox">
                 <label for="author" class="col-sm-2 control-label">Style</label>
                 <div class="col-sm-4">
-                    <input name="author" type="text" class="form-control" />
+                    <input ng-model="newHat.name" name="author" type="text" class="form-control" required/>
                 </div>
             </div>
             <div class="col-sm-12 hatFormBox">
                 <label for="email" class="col-sm-2 control-label">URL</label>
                 <div class="col-sm-4">
-                    <input name="email" type="text" class="form-control" />
+                    <input ng-model="newHat.image" name="email" type="text" class="form-control" />
                 </div>
             </div>
             <div class="col-sm-12 hatFormBox">
                 <label for="title" class="col-sm-2 control-label">Occasions</label>
                 <div class="col-sm-4">
-                    <input name="title" type="text" class="form-control" />
+                    <input ng-model="newHat.occasions" name="title" type="text" class="form-control" />
                 </div>
             </div>
             <div class="col-sm-12 hatFormBox">
                 <label for="content" class="col-sm-2 control-label">Formality</label>
                 <div class="col-sm-4">
-                    <input name="content" type="text" class="form-control" />
+                    <input ng-model="newHat.formality" name="content" type="text" class="form-control" />
                 </div>
             </div>
-            <div class="col-sm-6"  style="text-align: right; margin-top: 5px">
+            <div class="col-sm-offset-2 col-sm-10">
                 <button type="submit" class="btn btn-primary">submit</button>
             </div>
         </form>
     </div>
 </div>
+
+{{newHat}}
+
