@@ -27,3 +27,45 @@
 .hatScore {
 	margin-top: 16px
 }
+
+.profileContainer {
+	height: 200px;
+	img.profilePic {
+		height: 100px
+	}
+	img.score {
+		height: 40px;
+	}
+}
+
+.profileContainer2 {
+	height: 200px;
+	img.profilePic {
+		height: 170px;
+		border-radius: 50%
+	}
+	img.score {
+		height: 40px;
+	}
+}
+
+.profileInfo {
+	padding-top: 20px;
+	img.profilePic {
+		margin-left: 13px;
+		height: 170px;
+		border-radius: 50%
+	}
+	position: fixed;
+	left: 0px;
+	top: 92px;
+	height: 100%;
+	// width: 230px;
+	background: red;
+	>div{
+		clear: left;
+	}
+	.profileData {
+		margin-top: 15px;
+	}
+}

@@ -2,7 +2,9 @@
     <div class="col-xs-3 userBox" ng-class="{oddBox: $index%2!==0}">
         <div class="container profile">
             <div class='col-xs-2'>
-                <img class='profilePic' src={{user.avatar}} alt="">
+            {{user.id}}
+                <img ui-sref="profile({userId: user._id})" class='profilePic' src={{user.avatar}} alt="">
+        
             </div>
             <div class="col-xs-3">
                 <p>User Name</p>
