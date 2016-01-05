@@ -5,17 +5,12 @@ app.factory('RandomGreetings', function () {
     };
 
     var greetings = [
-        'Hello, world!',
-        'At long last, I live!',
-        'Hello, simple human.',
-        'What a beautiful day!',
-        'I\'m like any other project, except that I am yours. :)',
-        'This empty string is for Lindsay Levine.',
-        'こんにちは、ユーザー様。',
-        'Welcome. To. WEBSITE.',
-        ':D',
-        'Yes, I think we\'ve met before.',
-        'Gimme 3 mins... I just grabbed this really dope frittata'
+        'And you thought you knew hats',
+        'In the middle of 19th century baseball umpires wore top hats during the game.',
+        'Fedora was first a women’s hat than men’s. Now it is both.',
+        'Panama hat has never made in Panama. It is made in Equador.',
+        'Hats are your most important article of clothing',
+        'Even in the emperor\'s new clothes, the king still had a hat when he was naked.'
     ];
 
     return {
