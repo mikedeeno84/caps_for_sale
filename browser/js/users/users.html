@@ -1,6 +1,15 @@
 <div>
 	<p>TEST</p>
-	<ul>
-		<li ng-repeat="user in users">{{user.email}}</li>
-	</ul>
+	<div class="col-xs-3" ng-repeat='user in users'>
+		<div class="container">
+			<div>
+				<img src={{user.avatar}} alt="">
+			</div>
+			<div class="col-xs-9">
+				<p>Email: {{user.email}}</p>
+			</div>
+			<h4></h4>
+			
+		</div>
+	</div>
 </div>
