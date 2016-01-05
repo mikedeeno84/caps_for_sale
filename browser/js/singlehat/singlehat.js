@@ -8,6 +8,7 @@ app.config(function($stateProvider){
 			}
 		},
 		controller: function($scope, hat){
+
 			$scope.hat = hat;
 		}
 	})
