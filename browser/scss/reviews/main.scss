@@ -1,0 +1,24 @@
+.review {
+  width : 50%;
+  margin : 0 auto;
+  text-align: justify;
+  font-size: 22px;
+  font-weight: 300;
+
+  .hat-reviews {
+    border-bottom : 1px solid red;
+
+  }
+
+  .single-review {
+    border-bottom: 1px dashed black;
+    padding-bottom : 10px;
+    padding-top : 10px;
+    margin-bottom : 10px;
+  }
+
+  img {
+    width : 50px;
+    height : 50px;
+  }
+}

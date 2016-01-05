@@ -8,13 +8,16 @@ var schema = new mongoose.Schema({
 	body: {type: String}
 });
 
+
+//my seeed only runs if I comment this out
 schema.pre('save', function (next) {
-	var review = this
+	var review = this;
 	Hat.findOne({_id:review.hat})
 		.then(function(hat){
 			hat.reviews.push(review)
 			return hat.save()
-		}).then(next).then(null, console.log)
-})
+		}).then(next)
+  .then(null, console.log)
+});
 
 module.exports = mongoose.model("Review", schema);
