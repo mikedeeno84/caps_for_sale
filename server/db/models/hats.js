@@ -8,4 +8,4 @@ var schema = new mongoose.Schema({
 	reviews: [{type: Schema.Types.ObjectId, ref: 'Review'}]
 })
 
-mongoose.model('Hat', schema)
+module.exports = mongoose.model('Hat', schema)

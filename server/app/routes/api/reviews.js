@@ -58,4 +58,3 @@ router.delete('/:id', function(req, res, next) {
     })
     .then(null, next);
 });
-
