@@ -19,22 +19,78 @@ var seedHats = () => {
     var hats = [
       {
         name: 'Berets',
-        image : '',
+        image : '/img/beret.jpg',
         occasions : ['summer'],
         formality : '4',
         reviews : reviews
       },
       {
         name: 'Breton Caps',
-        image : '',
-        occasions : '',
+        image : '/img/breton.jpg',
+        occasions : ['summer', 'fall'],
         formality : '3',
         reviews : reviews
       },
       {
         name: 'Bowler Hats',
-        image : '',
+        image : '/img/bowler.jpg',
+        occasions : ['errday', 'classyday'],
+        formality : '2',
+        reviews : reviews
+      },
+      {
+        name: 'Brixton',
+        image : '/img/breton.jpg',
+        occasions : ['fall', 'winter'],
+        formality : '3',
+        reviews : reviews
+      },
+      {
+        name: 'Beanie',
+        image : '/img/beanie.jpg',
+        occasions : ['winter', 'fall'],
+        formality : '2',
+        reviews : reviews
+      },
+      {
+        name: 'Boater',
+        image : '/img/boater.jpg',
         occasions : ['errday', 'class'],
+        formality : '2',
+        reviews : reviews
+      },
+      {
+        name: 'Cowboy Hats',
+        image : '/img/cowboy.jpg',
+        occasions : ['whenever'],
+        formality : '3',
+        reviews : reviews
+      },
+      {
+        name: 'Deerstalker Hats',
+        image : '/img/deerstalker.jpg',
+        occasions : ['solving crimes'],
+        formality : '4',
+        reviews : reviews
+      },
+      {
+        name: 'Fez Hats',
+        image : '/img/fez.jpg',
+        occasions : ['Alladin-theme events', 'Broadway'],
+        formality : '2',
+        reviews : reviews
+      },
+      {
+        name: 'Fisherman Caps',
+        image : '/img/fisherman.jpg',
+        occasions : ['searching for moby', 'dancing on roof'],
+        formality : '2',
+        reviews : reviews
+      },
+      {
+        name: 'Ganster Hats',
+        image : '/img/ganster.jpg',
+        occasions : ['feeling swag'],
         formality : '2',
         reviews : reviews
       }

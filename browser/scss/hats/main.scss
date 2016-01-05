@@ -3,10 +3,15 @@
 }
 
 .hats {
-  width: 40%;
-  margin: 0 auto;
-  text-align: justify;
+  width : 100%;
+  margin : 0 auto;
+  text-alignt : center;
   font-size: 22px;
   font-weight: 300;
   float: left;
+
+  .hat-container {
+    width : 100%;
+    margin : 0 auto;
+  }
 }
