@@ -32,6 +32,15 @@ app.factory('UserFactory',function($http){
       }).then(function(res) {
         return res.data;
       });
-    }
+    },
+
+		getProfile: function(userId){
+			return $http({
+				method: 'GET',
+				url: '/api/user/'+userId
+			}).then(function(res){
+				return res.data
+			})
+		}
 	}
 })
