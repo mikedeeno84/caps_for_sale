@@ -5,23 +5,14 @@ app.directive('addreview',function(ReviewFactory){
   }
 })
 
-app.controller('ModalCtrl', function ($scope) {
-
-  });
 
 
-app.controller("reviewController", function($scope, ReviewFactory, AuthService){
+
+app.controller("reviewController", function($scope, ReviewFactory){
 
 			$scope.hatreview = {};
-			// $scope.hatreview.hat = $scope.hat._id;
-			$scope.setUser = function () {
-                AuthService.getLoggedInUser().then(function (user) {
-                	console.log(user)
-                    // $scope.hatreview.user = user._id;
-                });
-            }
-            $scope.setUser();
-
+			$scope.hatreview.hat = $scope.hat._id;
+			$scope.hatreview.user = $scope.user._id
             console.log($scope.hatreview)
 			$scope.formsubmit = function(review){
 				review.rating = parseInt(review.rating);
@@ -30,24 +21,6 @@ app.controller("reviewController", function($scope, ReviewFactory, AuthService){
 					.then(function(review){
 						$scope.hat.reviews.push(review)
 					}).then(null, console.log);
+				$scope.ok();
 			}
 })
-
-
-
-app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
-
-  // $scope.items = items;
-  // $scope.selected = {
-  //   item: $scope.items[0]
-  // };
-
-  $scope.ok = function () {
-    $uibModalInstance.close($scope.selected.item);
-  };
-
-  $scope.cancel = function () {
-    $uibModalInstance.dismiss('cancel');
-  };
-});
-

@@ -7,7 +7,7 @@ app.config(function($stateProvider){
 				return HatFactory.getOneHat($stateParams.hatId)
 			}
 		},
-		controller: function($scope, hat, $uibModal, $log){
+		controller: function($scope, hat, $uibModal, $log, AuthService){
 			$scope.hat = hat;
 			$scope.showModal = false;
 		    $scope.open = function () {
@@ -16,13 +16,18 @@ app.config(function($stateProvider){
 		        animation: $scope.animationsEnabled,
 		        templateUrl: '/js/common/directives/modal/modal.html',
 		        controller: 'ModalInstanceCtrl',
+		        size: 'lg',
 		        resolve: {
-		          items: function () {
-		            return $scope.items;
+		          hat: function () {
+		            return $scope.hat;
+		          },
+		          user: function(){
+		          	return AuthService.getLoggedInUser().then(function (user) {
+                		return user
+               		 });
 		          }
 		        }
 		      });
-
 		    modalInstance.result.then(function (selectedItem) {
 		      $scope.selected = selectedItem;
 		    }, function () {
