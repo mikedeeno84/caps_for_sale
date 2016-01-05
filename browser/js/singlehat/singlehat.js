@@ -7,7 +7,7 @@ app.config(function($stateProvider){
 				return HatFactory.getOneHat($stateParams.hatId)
 			}
 		},
-		controller: function(HatFactory, hat){
+		controller: function($scope, hat){
 			$scope.hat = hat;
 		}
 	})
