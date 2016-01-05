@@ -13,20 +13,20 @@ var seedReviews = function() {
       user: mongoose.Types.ObjectId(),
       hat : mongoose.Types.ObjectId(),
       rating : 4,
-      body : 'this is a review for the berets'
+      body : 'Wow. I love this hat!'
     },
     {
       user: mongoose.Types.ObjectId(),
       hat : mongoose.Types.ObjectId(),
       rating : '3',
-      body : 'this is a review for the breton'
+      body : 'This hat is awesome. I have so much fun wearing it. I have not cleaned it since purchase.'
       //reviews : ''
     },
     {
       user: mongoose.Types.ObjectId(),
       hat : mongoose.Types.ObjectId(),
       rating : '2',
-      body : 'this is a review for the bowler'
+      body : 'I just love hats and this website is great for my hat buying addiction.'
       //reviews : ''
     }
   ]
