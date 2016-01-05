@@ -4,4 +4,4 @@ app.directive('hatItem', function () {
 		templateUrl: 'js/common/directives/hatitem/hatitem.html',
 		scope: { hat: "=" }
 	}
-})
+});
