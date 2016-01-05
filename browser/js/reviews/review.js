@@ -2,7 +2,7 @@ app.config(function($stateProvider) {
   $stateProvider.state("reviews", {
     url : '/reviews',
     controller : 'ReviewController',
-    templateUrl : 'js/reviews/review.html',
+    templateUrl : 'js/reviews/reviews.html',
     resolve : {
       allreviews : function(ReviewFactory) {
         return ReviewFactory.getReviews();

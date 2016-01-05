@@ -1,0 +1,16 @@
+<div class="col-md-12 col-sm-12 col-xs-6" style="clear: left">
+	<h5>Review {{hat.name}}!</h5>
+	<form name="review" ng-submit="formsubmit(hatreview)" ng-controller="reviewController">
+            <div class="col-sm-12 hatFormBox">
+            	<textarea ng-model="hatreview.body"></textarea>
+            </div>            
+            <div class="col-sm-12 hatFormBox">
+            	<input type="radio" name="rating" ng-model="hatreview.rating" value="1"><label> 1</label>
+            	<input type="radio" name="rating" ng-model="hatreview.rating" value="2"><label> 2</label>
+            	<input type="radio" name="rating" ng-model="hatreview.rating" value="3"><label> 3</label>
+            	<input type="radio" name="rating" ng-model="hatreview.rating" value="4"><label> 4</label>
+            	<input type="radio" name="rating" ng-model="hatreview.rating" value="5"><label> 5</label>
+            </div>
+	<button type="submit">submit</button>
+	</form>
+</div>
