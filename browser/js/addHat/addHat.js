@@ -6,10 +6,10 @@ app.config(function($stateProvider){
 	})
 })
 
-app.controller('addHatController',function($scope,hatFactory,$state){
+app.controller('addHatController',function($scope,HatFactory,$state){
 	$scope.hatForm;
 	$scope.formSubmit = function(data){
-		hatFactory.addHat(data)
+		HatFactory.addHat(data)
 		.then(function(newHat){
 			console.log('Hat: ',newHat)
 			$state.go('home')

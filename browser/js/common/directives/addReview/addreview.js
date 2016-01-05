@@ -10,7 +10,8 @@ app.controller("reviewController", function($scope, ReviewFactory, AuthService){
 			$scope.hatreview.hat = $scope.hat._id;
 			$scope.setUser = function () {
                 AuthService.getLoggedInUser().then(function (user) {
-                    $scope.hatreview.user = user.email;
+                	console.log(user)
+                    $scope.hatreview.user = user._id;
                 });
             }
             $scope.setUser();
@@ -21,7 +22,7 @@ app.controller("reviewController", function($scope, ReviewFactory, AuthService){
 				// console.log(review);
 				ReviewFactory.create(review)
 					.then(function(review){
-						hat.reviews.push(review)
+						$scope.hat.reviews.push(review)
 					}).then(null, console.log);
 			}
 })

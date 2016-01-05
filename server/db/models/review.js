@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-let Hat = mongoose.model('Hat');
+var Hat = mongoose.model('Hat');
 var schema = new mongoose.Schema({
 	user: {type: Schema.Types.ObjectId, ref: 'User', required: true},
 	hat: {type: Schema.Types.ObjectId, ref: 'Hat', required: true},

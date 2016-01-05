@@ -2,7 +2,7 @@ var router = require('express').Router({mergeParams: true});
 
 var Hat = require('../../../db/models/hats');
 router.get('/', function (req, res, next) {
-	Hat.find(req.params).exec()
+	Hat.find(req.params).populate('reviews').exec()
 		.then(function(hats){
 			res.json(hats);
 		}).then(null, next)
@@ -16,7 +16,7 @@ router.post('/', function(req, res, next){
 });
 
 router.get('/:hatId', function(req, res, next){
-	Hat.findOne({_id:req.params.hatId}).exec()
+	Hat.findOne({_id:req.params.hatId}).populate('reviews').exec()
 		.then(function(foundHat){
 			res.json(foundHat)
 		}).then(null,next)
