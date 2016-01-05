@@ -1,6 +1,5 @@
-<div class="col-md-12 col-sm-12 col-xs-6" style="clear: left">
-	<form name="review" ng-submit="formsubmit(hatreview)" ng-controller="reviewController">
-            {{hat}}
+<div class="col-md-12 col-sm-12 col-xs-6" style="clear: left" ng-controller="reviewController">
+	<form name="review" ng-submit="formsubmit(hatreview)" >
             <div class="col-sm-12 hatFormBox">
             	<textarea ng-model="hatreview.body"></textarea>
             </div>            

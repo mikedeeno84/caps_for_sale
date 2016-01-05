@@ -1,11 +1,11 @@
-<h1>{{hat.name}}</h1>
+<div class="container"><h1>{{hat.name}}</h1>
 <img ng-src="{{hat.image}}">
 <div ng-show = "hat.occasions">
 	<h2>Occasions</h2>
 	<span ng-repeat="occasion in hat.occasions">{{occasion}}</span>
 </div>
 <h3 ng-show="hat.formality">{{hat.formality}}</h3>
-<button ng-click="open()">open modal</button>
+<button ng-click="open()">Review {{hat.name}}</button>
 <!-- Button trigger modal -->
 
 
@@ -13,4 +13,4 @@
 
 
 <reviews ng-show = "hat.reviews" ng-repeat="review in hat.reviews" review ="review"></reviews>
-
+</div>
