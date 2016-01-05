@@ -1,11 +1,10 @@
 <div class="review">
     <div class="content-container">
-        <ul>
-            <!-- it should be review in specificReviews-->
-            <!-- will fix later-->
-            <li ng-repeat="review in reviews">
-                {{ review | json }}
-            </li>
-        </ul>
+            <div class="col-sm-12 hat-reviews" ng-repeat="hat in hats" hat="hat">
+                <img src="{{hat.image}}" alt="">
+                <div ng-repeat="review in hat.reviews">
+                    <div class="single-review">{{ review.body }}</div>
+                </div>
+            </div>
     </div>
 </div>
