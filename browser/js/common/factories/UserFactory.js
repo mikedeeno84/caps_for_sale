@@ -1,5 +1,5 @@
 app.factory('UserFactory',function($http){
-	
+
 	var users;
 
 	return {
@@ -13,6 +13,27 @@ app.factory('UserFactory',function($http){
 				return res.data
 			})
 		},
+
+    submitCoveted : function(user, hat) {
+      return $http({
+        method : 'PUT',
+        url : '/api/user',
+        data : {user : user, hat:  hat, type : 'covet' }
+      }).then(function(res) {
+        return res.data;
+      });
+    },
+
+    submitOwned : function(user, hat) {
+      return $http({
+        method : 'PUT',
+        url : '/api/user',
+        data : {user : user, hat:  hat, type : 'owned' }
+      }).then(function(res) {
+        return res.data;
+      });
+    },
+
 		getProfile: function(userId){
 			return $http({
 				method: 'GET',

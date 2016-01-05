@@ -26,8 +26,8 @@ var schema = new mongoose.Schema({
     google: {
         id: String
     },
-    owned: [{type: Schema.Types.ObjectId, ref: 'Hat'}],
-    coveted: [{type: Schema.Types.ObjectId, ref: 'Hat'}],
+    owned: [{type: Schema.Types.ObjectId, ref: 'Hat', index: { unique: true}}],
+    coveted: [{type: Schema.Types.ObjectId, ref: 'Hat', index: { unique: true}}],
     avatar: {type: String, default: avatarUrl}
 });
 

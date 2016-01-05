@@ -26,6 +26,31 @@ router.get('/:user_id',function(req,res,next){
 	}else{
 		res.send("User Not Found");
 	}
-})
+});
+
+router.put('/', function(req, res, next) {
+  console.log(req.body.user.email);
+  if (req.body.type === 'covet') {
+    res.json(req.body.user.email);
+    User.findOne({email : req.body.user.email}).exec()
+    .then(function(user){
+      user.coveted.push(req.body.hat);
+      return user.save();
+    }).then(function(user){
+      res.json(user);
+    })
+  }
+
+  if (req.body.type ===  'owned') {
+    res.json(req.body.user.email);
+    User.findOne({email : req.body.user.email}).exec()
+      .then(function(user){
+        user.owned.push(req.body.hat);
+        return user.save();
+      }).then(function(user){
+      res.json(user);
+    })
+  }
+});
 
 module.exports = router;
